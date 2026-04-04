@@ -1,13 +1,14 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-void main() {
-    //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-    // to see how IntelliJ IDEA suggests fixing it.
-    IO.println(String.format("Hello and welcome!"));
+package com.arena;
 
-    for (int i = 1; i <= 5; i++) {
-        //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-        // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-        IO.println("i = " + i);
-    }
+import com.arena.boundary.CLIGameUI;
+import com.arena.boundary.GameUI;
+import com.arena.control.GameController;
+
+// entry point of game, sets up GameUI and hands control to GameController
+public class Main {
+  public static void main(String[] args) {
+    GameUI ui = new CLIGameUI();
+    GameController controller = new GameController(ui);
+    controller.startGame();
+  }
 }
