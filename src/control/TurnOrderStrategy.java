@@ -1,6 +1,6 @@
-package com.arena.control;
+package control;
 
-import com.arena.entity.combatant.Combatant;
+import entity.combatant.Combatant;
 import java.util.List;
 
 // interface for implementing logic of deciding the order combatants act each round.

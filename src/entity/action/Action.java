@@ -1,6 +1,6 @@
-package com.arena.entity.action;
+package entity.action;
 
-import com.arena.entity.combatant.Combatant;
+import entity.combatant.Combatant;
 import java.util.List;
 
 // interface for implementing battle actions (attack, defend, item, special skills)

@@ -1,8 +1,8 @@
-package com.arena.control;
+package control;
 
-import com.arena.entity.combatant.Player;
-import com.arena.entity.combatant.Warrior;
-import com.arena.entity.combatant.Wizard;
+import entity.combatant.Player;
+import entity.combatant.Warrior;
+import entity.combatant.Wizard;
 
 // factory class for creating Player objects, index corresponds to position in selection menu
 public class PlayerFactory {

@@ -1,6 +1,6 @@
-package com.arena.control;
+package control;
 
-import com.arena.entity.combatant.Combatant;
+import entity.combatant.Combatant;
 import java.util.ArrayList;
 import java.util.List;
 
