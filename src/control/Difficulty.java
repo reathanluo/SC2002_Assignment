@@ -1,4 +1,4 @@
-package com.arena.control;
+package control;
 
 // enum for difficulty levels
 public enum Difficulty {

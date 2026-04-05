@@ -1,9 +1,9 @@
-package com.arena.control;
+package control;
 
-import com.arena.entity.item.Item;
-import com.arena.entity.item.Potion;
-import com.arena.entity.item.PowerStone;
-import com.arena.entity.item.SmokeBomb;
+import entity.item.Item;
+import entity.item.Potion;
+import entity.item.PowerStone;
+import entity.item.SmokeBomb;
 
 // factory class for creating objects in one place. Index corresponds to position in item selection menu (0 - potion, 1 - power stonem, 2 - smoke bomb)
 public class ItemFactory {

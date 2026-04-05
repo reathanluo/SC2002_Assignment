@@ -1,13 +1,13 @@
-package com.arena.control;
+package control;
 
-import com.arena.entity.combatant.Enemy;
-import com.arena.entity.combatant.Goblin;
-import com.arena.entity.combatant.Player;
-import com.arena.entity.combatant.Warrior;
-import com.arena.entity.combatant.Wizard;
-import com.arena.entity.combatant.Wolf;
-import com.arena.entity.item.Item;
-import com.arena.boundary.GameUI;
+import entity.combatant.Enemy;
+import entity.combatant.Goblin;
+import entity.combatant.Player;
+import entity.combatant.Warrior;
+import entity.combatant.Wizard;
+import entity.combatant.Wolf;
+import entity.item.Item;
+import boundary.GameUI;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;

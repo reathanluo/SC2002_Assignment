@@ -1,9 +1,9 @@
-package com.arena.control;
+package control;
 
-import com.arena.entity.action.*;
-import com.arena.entity.combatant.*;
-import com.arena.entity.item.Item;
-import com.arena.boundary.GameUI;
+import entity.action.*;
+import entity.combatant.*;
+import entity.item.Item;
+import boundary.GameUI;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;

@@ -1,11 +1,11 @@
-package com.arena.boundary;
+package boundary;
 
-import com.arena.entity.action.Action;
-import com.arena.entity.combatant.Combatant;
-import com.arena.entity.combatant.Enemy;
-import com.arena.entity.combatant.Player;
-import com.arena.entity.effect.StatusEffect;
-import com.arena.entity.item.Item;
+import entity.action.Action;
+import entity.combatant.Combatant;
+import entity.combatant.Enemy;
+import entity.combatant.Player;
+import entity.effect.StatusEffect;
+import entity.item.Item;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;

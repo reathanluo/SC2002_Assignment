@@ -1,11 +1,11 @@
-package com.arena.boundary;
+package boundary;
 
-import com.arena.entity.action.Action;
-import com.arena.entity.combatant.Combatant;
-import com.arena.entity.combatant.Enemy;
-import com.arena.entity.combatant.Player;
-import com.arena.entity.item.Item;
-import com.arena.control.Difficulty;
+import entity.action.Action;
+import entity.combatant.Combatant;
+import entity.combatant.Enemy;
+import entity.combatant.Player;
+import entity.item.Item;
+import control.Difficulty;
 import java.util.List;
 
 // interface for UI (input/output) implementations. 
