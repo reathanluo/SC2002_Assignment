@@ -1,7 +1,7 @@
-package com.arena.entity.action;
+package entity.action;
 
-import com.arena.entity.combatant.Combatant;
-import com.arena.entity.combatant.Player;
+import entity.combatant.Combatant;
+import entity.combatant.Player;
 import java.util.List;
 
 // Wizard's special skill (deals BasicAttack damage to ALL enemies at once)

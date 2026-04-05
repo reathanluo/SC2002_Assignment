@@ -1,8 +1,8 @@
-package com.arena.entity.action;
+package entity.action;
 
-import com.arena.entity.combatant.Combatant;
-import com.arena.entity.combatant.Player;
-import com.arena.entity.item.Item;
+import entity.combatant.Combatant;
+import entity.combatant.Player;
+import entity.item.Item;
 import java.util.List;
 
 // action for using a particular item. 

@@ -1,8 +1,8 @@
-package com.arena.entity.action;
+package entity.action;
 
-import com.arena.entity.combatant.Combatant;
-import com.arena.entity.combatant.Player;
-import com.arena.entity.effect.StunEffect;
+import entity.combatant.Combatant;
+import entity.combatant.Player;
+import entity.effect.StunEffect;
 import java.util.List;
 
 // Warrior's special skill (deals standard ATK damage to one enemy and sturns them for 2 turns)

@@ -1,6 +1,6 @@
-package com.arena.entity.action;
+package entity.action;
 
-import com.arena.entity.combatant.Combatant;
+import entity.combatant.Combatant;
 import java.util.List;
 
 // basic single-target attack, deals damage equal to the performer's ATK stat, reduced by target's DEF stat

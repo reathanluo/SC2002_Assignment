@@ -1,7 +1,7 @@
-package com.arena.entity.action;
+package entity.action;
 
-import com.arena.entity.combatant.Combatant;
-import com.arena.entity.effect.DefendEffect;
+import entity.combatant.Combatant;
+import entity.effect.DefendEffect;
 import java.util.List;
 
 // raises performer's DEF by 10 for current turn and the next
