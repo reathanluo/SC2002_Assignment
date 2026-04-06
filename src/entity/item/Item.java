@@ -1,7 +1,8 @@
 package entity.item;
-import com.arena.entity.action.Action;
-import com.arena.entity.combatant.Combatant;
-import com.arena.entity.combatant.Player;
+
+import entity.action.Action;
+import entity.combatant.Combatant;
+import entity.combatant.Player;
 import java.util.List;
 
 // Base class for items the player can use during a fight.
