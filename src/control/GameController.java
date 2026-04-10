@@ -89,7 +89,7 @@ public class GameController {
     }
 
     private List<Integer> selectItemIndices() {
-        List<String> itemNames = Arrays.asList("Potion", "Power Stone", "Smoke Bomb");
+        List<String> itemNames = Arrays.asList("Potion", "Power Stone", "Smoke Bomb", "Fire Flask");
 
         ui.displayItemSelectionPrompt(1, 2);
         int choice1 = ui.getItemChoice(itemNames);
