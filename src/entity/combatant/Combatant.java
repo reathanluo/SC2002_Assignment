@@ -103,13 +103,17 @@ public abstract class Combatant {
     }
 
     // called at start of combatant's turn, checks all active effects and removes expired ones.
-    public void applyStatusEffects() {
-        // iterating backwards so removing element does not change index of unchecked ones
+   public void applyStatusEffects() {
         for (int i = statusEffects.size() - 1; i >= 0; i--) {
             StatusEffect effect = statusEffects.get(i);
+
+            if (effect instanceof entity.effect.BurnEffect) {
+                ((entity.effect.BurnEffect) effect).tick(this);
+            }
+
             effect.decrementDuration();
             if (effect.isExpired()) {
-                effect.onRemove(this); // reverse any stat change effect, no action for others
+                effect.onRemove(this);
                 statusEffects.remove(i);
             }
         }
