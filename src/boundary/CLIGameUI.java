@@ -127,6 +127,7 @@ public class CLIGameUI implements GameUI {
       System.out.println("  Attacks " + player.getName() + " for " + damage
           + " damage! - HP: " + player.getHp() + "/" + player.getMaxHp());
     }
+    System.out.println();
   }
 
   @Override
@@ -249,6 +250,8 @@ public class CLIGameUI implements GameUI {
     }
 
     System.out.println(" | Special Skills Cooldown: " + player.getSpecialSkillCooldown() + " rounds");
+      System.out.println();
+    System.out.println("--------------------------------------------"); 
   }
 
   @Override
