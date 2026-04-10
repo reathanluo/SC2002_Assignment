@@ -30,7 +30,7 @@ public class LevelFactory {
             case NIGHTMARE:
                 return new Level(difficulty, "Nightmare - 1 Goblin + 1 Wolf | Backup: Dragon Boss",
                     Arrays.asList(new Goblin(), new Wolf()),
-                    Arrays.asList(new Boss()))
+                    Arrays.asList(new Boss()));
             default:
                 throw new IllegalArgumentException("Unknown difficulty: " + difficulty);
         }
