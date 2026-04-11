@@ -1,5 +1,6 @@
 package control;
 
+import entity.combatant.Boss;
 import entity.combatant.Enemy;
 import entity.combatant.Goblin;
 import entity.combatant.Player;
@@ -33,7 +34,7 @@ public class GameController {
             // pass objects for reference so stats are displayed without hard-coding
             ui.displayLoadingScreen(
                 Arrays.asList(new Warrior(), new Wizard()),
-                Arrays.asList((Enemy) new Goblin(), new Wolf())
+                Arrays.asList(new Goblin(), new Wolf(), new Boss())
             );
 
             lastPlayerIndex = selectPlayerIndex();
