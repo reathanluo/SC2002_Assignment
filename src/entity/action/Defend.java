@@ -20,6 +20,8 @@ public class Defend implements Action {
 
   @Override
   public void execute(Combatant performer, List<Combatant> targets) {
+    // remove any existing defend effect first to prevent DEF stacking
+    performer.removeStatusEffectByType(DefendEffect.class);
     // add defend effect for 2 turns
     performer.addStatusEffect(new DefendEffect(2));
   }
