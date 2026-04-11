@@ -102,13 +102,27 @@ public abstract class Combatant {
         this.statusEffects.remove(effect);
     }
 
+    // removes all active effects of the given type and reverses their stat changes
+    public void removeStatusEffectByType(Class<? extends StatusEffect> type) {
+        for (int i = statusEffects.size() - 1; i >= 0; i--) {
+            StatusEffect effect = statusEffects.get(i);
+            if (type.isInstance(effect)) {
+                effect.onRemove(this);
+                statusEffects.remove(i);
+            }
+        }
+    }
+
     // called at start of combatant's turn, checks all active effects and removes expired ones.
-   public void applyStatusEffects() {
+    // returns messages from effects (eg: burn damage) so BattleEngine can display them via the UI.
+    public List<String> applyStatusEffects() {
+        List<String> messages = new ArrayList<>();
         for (int i = statusEffects.size() - 1; i >= 0; i--) {
             StatusEffect effect = statusEffects.get(i);
 
             if (effect instanceof entity.effect.BurnEffect) {
-                ((entity.effect.BurnEffect) effect).tick(this);
+                String msg = ((entity.effect.BurnEffect) effect).tick(this);
+                if (msg != null) messages.add(msg);
             }
 
             effect.decrementDuration();
@@ -117,6 +131,7 @@ public abstract class Combatant {
                 statusEffects.remove(i);
             }
         }
+        return messages;
     }
 
     // returns true if any active effect is flagging that this combatant cannot act.

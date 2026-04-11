@@ -13,10 +13,11 @@ public abstract class Enemy extends Combatant {
         return behavior;
     }
 
-    // called by BattleEngine on enemey's turn.
-    public void performAction(Combatant target) {
+    // called by BattleEngine on enemy's turn. Returns special message or null.
+    public String performAction(Combatant target) {
         if (behavior != null) {
-            behavior.execute(this, target);
+            return behavior.execute(this, target);
         }
+        return null;
     }
 }

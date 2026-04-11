@@ -17,15 +17,19 @@ public class BurnEffect extends StatusEffect {
 
     @Override
     public void onApply(Combatant target) {
-        System.out.println("  [" + target.getName() + " is now BURNING for " + damagePerTurn + " damage/turn!]");
+        // message is displayed by BattleEngine via the UI
     }
 
-    public void tick(Combatant target) {
+    // applies burn damage and returns a message describing the result
+    public String tick(Combatant target) {
         int newHp = Math.max(0, target.getHp() - damagePerTurn);
         target.setHp(newHp);
-        System.out.println("  [BURN] " + target.getName() + " takes " + damagePerTurn + " burn damage! (" + target.getHp() + " HP remaining)");
+        StringBuilder msg = new StringBuilder();
+        msg.append("  [BURN] ").append(target.getName()).append(" takes ").append(damagePerTurn)
+           .append(" burn damage! (").append(target.getHp()).append(" HP remaining)");
         if (!target.isAlive()) {
-            System.out.println("  " + target.getName() + " burned to death!");
+            msg.append("\n  ").append(target.getName()).append(" burned to death!");
         }
+        return msg.toString();
     }
 }

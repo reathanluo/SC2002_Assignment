@@ -70,7 +70,10 @@ public class BattleEngine {
     // Handles one combatant's turn, tick effects, check stun, then action.
     private void processTurn(Combatant combatant) {
         // Tick status effects first, an effect that expires here won't block this turn.
-        combatant.applyStatusEffects();
+        List<String> effectMessages = combatant.applyStatusEffects();
+        for (String msg : effectMessages) {
+            ui.displayActionResult(msg);
+        }
 
         if (!combatant.isAlive()) return;
 
@@ -202,9 +205,12 @@ public class BattleEngine {
     private void processEnemyTurn(Enemy enemy) {
         boolean blocked = player.hasDamageNegation();
         int hpBefore = player.getHp();
-        enemy.performAction(player);
+        String specialMessage = enemy.performAction(player);
         int damage = hpBefore - player.getHp(); // 0 if blocked
         ui.displayEnemyAttack(enemy, player, damage, blocked);
+        if (specialMessage != null) {
+            ui.displayActionResult(specialMessage);
+        }
     }
 
     // returns true if the battle should end, either the player is dead,
