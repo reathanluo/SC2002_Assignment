@@ -27,7 +27,9 @@ public class ShieldBash extends SpecialSkill {
   public void execute(Combatant performer, List<Combatant> targets) {
     Combatant target = targets.get(0);
     target.takeDamage(performer.getAttack());
-    target.addStatusEffect(new StunEffect(3));
+    if (target.isAlive()) {
+      target.addStatusEffect(new StunEffect(3));
+    }
     triggerCooldown();
   }
 
