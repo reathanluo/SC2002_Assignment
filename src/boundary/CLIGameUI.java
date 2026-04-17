@@ -197,7 +197,7 @@ public class CLIGameUI implements GameUI {
     System.out.println("Choose item to use:");
     for (int i = 0; i < items.size(); i++) {
       System.out.println("  " + (i + 1) + ". " + items.get(i).getName()
-          + " — " + items.get(i).getDescription());
+          + " - " + items.get(i).getDescription());
     }
     System.out.println("  0. Cancel");
     int choice = readChoice(0, items.size());

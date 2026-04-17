@@ -26,9 +26,11 @@ public class PowerStone extends Item {
 
   @Override
   public void use(Player user, List<Combatant> targets) {
-    // execute() triggers the cooldown internally, so save it before the call
-    // and write it back after, that way the stone's "free use" promise holds
-    int savedCooldown = user.getSpecialSkillCooldown();
+    // execute() triggers the cooldown internally, so save the pre-decrement
+    // cooldown and write it back after, that way the stone has zero net
+    // effect on cooldown (undoing both the skill's triggerCooldown and the
+    // decrement that BattleEngine already applied this turn).
+    int savedCooldown = user.getPreDecrementCooldown();
     user.getSpecialSkill().execute(user, targets);
     user.setSpecialSkillCooldown(savedCooldown);
     markConsumed();

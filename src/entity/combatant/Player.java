@@ -11,11 +11,13 @@ import java.util.List;
 public abstract class Player extends Combatant {
     private List<Item> inventory;
     private int specialSkillCooldown;
+    private int preDecrementCooldown;
 
     public Player(String name, int hp, int attack, int defense, int speed) {
         super(name, hp, attack, defense, speed);
         this.inventory = new ArrayList<>();
         this.specialSkillCooldown = 0;
+        this.preDecrementCooldown = 0;
     }
 
     public List<Item> getInventory() {
@@ -31,9 +33,14 @@ public abstract class Player extends Combatant {
     }
 
     public void decrementCooldown() {
+        preDecrementCooldown = specialSkillCooldown;
         if (specialSkillCooldown > 0) {
             specialSkillCooldown--;
         }
+    }
+
+    public int getPreDecrementCooldown() {
+        return preDecrementCooldown;
     }
 
     public void addItem(Item item) {
