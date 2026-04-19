@@ -32,7 +32,7 @@ public abstract class Item {
 
   public abstract String getDescription();
 
-  // where the actual item logic lives — subclasses handle their own effects
+  // where the actual item logic lives, subclasses handle their own effects
   // and should always call markConsumed() when done
   public abstract void use(Player user, List<Combatant> targets);
 
