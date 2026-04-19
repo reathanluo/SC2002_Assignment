@@ -5,7 +5,6 @@ import entity.combatant.Combatant;
 import entity.combatant.Enemy;
 import entity.combatant.Player;
 import entity.item.Item;
-import control.Difficulty;
 import java.util.List;
 
 // interface for UI (input/output) implementations. 

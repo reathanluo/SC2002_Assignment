@@ -1,13 +1,11 @@
 package control;
 
 import entity.combatant.Boss;
-import entity.combatant.Enemy;
 import entity.combatant.Goblin;
 import entity.combatant.Player;
 import entity.combatant.Warrior;
 import entity.combatant.Wizard;
 import entity.combatant.Wolf;
-import entity.item.Item;
 import boundary.GameUI;
 import java.util.ArrayList;
 import java.util.Arrays;
